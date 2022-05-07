@@ -1,0 +1,170 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    /* outline: 1pt solid black; */
+}
+
+.wrap {
+    position: absolute;
+    /* width: 1028px; */
+    /* height: 736px; */
+    /* left: 0px; */
+    /* top: 0px;  */
+    height: 110vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background:  #FFD370 ;
+}
+
+.LogoArea{
+    flex: 1;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+.LogoArea .top{
+    display: flex;
+    align-items: center;
+}
+
+.LogoArea .top .img .logo_lg{
+    position:absolute;
+    /* top:10px; */
+    /* left:10px; */
+    z-index: 1;
+}
+.LogoArea .top .img .logo_lg2 {
+    position:relative;
+    top:1px;
+    left:8px;
+    /* left: -20px; */
+    z-index: 5;
+}
+
+.LogoArea .top .text{
+    padding-left: 15px;
+}
+
+
+
+.LogoArea .Bottom {
+    padding-top: 25px;
+}
+
+
+
+
+.Right_Page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+}
+
+
+.Right_Page .title {
+    /* flex: 2; */
+    padding-bottom: 15px;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    width: 36%;
+    align-items: center;
+    font-size: 25px;
+}
+
+ 
+
+.Right_Page .account {
+    flex: .35;
+}
+
+.Right_Page .account .showHint{
+    color: red;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+.Right_Page .account input {
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.Right_Page .Name{
+    flex: .35;
+}
+
+.Right_Page .Name input {
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+
+}
+
+.Right_Page .Password input {
+    outline: none;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    
+}
+
+.Right_Page .Password{
+    flex: .35;
+    padding-bottom: 15px;
+}
+.Right_Page .Password {
+
+}
+
+.Right_Page .LoingBtn {
+    display: flex;
+    flex: .35;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Right_Page .LoingBtn input{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 15px;
+    background-color: rgb(38, 38, 38);
+    color: white;
+    font-weight: bolder;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.Right_Page .register_span {
+    flex: .35;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder; 
+
+}
+
+.Right_Page .register_span a{
+    text-decoration: none;
+    color: black;
+    font-size: bolder;
+}
