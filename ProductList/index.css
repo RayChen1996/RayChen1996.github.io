@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    outline: 1px solid black;
+}
+
+
+.app{
+    height: 500vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header{
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.header .nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header .nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .nav ul li{
+    padding: 5px;margin: 5px;
+}
+
+.banner{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.banner {
+    margin: 0 auto;
+    display: flex;
+}
+
+.MauinContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.MauinContainer .menu{
+    flex: .5;
+}
+
+
+.MauinContainer .menu li{
+    padding: 5px;
+}
+
+.MauinContainer .menu li.active {
+    background-color: #3F5D45;
+    color: #EAF0ED;
+    text-align: center;
+}
+.MauinContainer .menu li:hover {
+    background-color: #EAF0ED;
+    color: #3F5D45;
+    text-align: center;
+}
+
+
+.MauinContainer .ProductList {
+    flex: 2;
+}
