@@ -14,426 +14,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <style>
-      /* 重置樣式 */
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Rajdhani", sans-serif;
-      }
-
-      body {
-        background-color: #0f0f0f;
-        color: #ffffff;
-        line-height: 1.6;
-      }
-
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      ul {
-        list-style: none;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* 導航欄 */
-      header {
-        padding: 20px 0;
-        position: absolute;
-        width: 100%;
-        z-index: 10;
-      }
-
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .logo {
-        font-size: 24px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 30px;
-      }
-
-      .nav-links a {
-        text-transform: uppercase;
-        font-weight: 500;
-        letter-spacing: 1px;
-        font-size: 14px;
-        transition: color 0.3s;
-      }
-
-      .nav-links a:hover {
-        color: #00ff9d;
-      }
-
-      /* 英雄區塊 */
-      .hero {
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        background-color: #000;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        padding-left: 10%;
-      }
-
-      .hero-bg {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 50%;
-        opacity: 0.7;
-        object-fit: cover;
-      }
-
-      .hero h1 {
-        font-size: 48px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
-      }
-
-      .hero h2 {
-        font-size: 72px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        color: #00ff9d;
-        margin-bottom: 30px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 12px 30px;
-        background-color: #00ff9d;
-        color: #000;
-        border-radius: 30px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s;
-      }
-
-      .btn:hover {
-        background-color: #00cc7d;
-        transform: translateY(-3px);
-      }
-
-      /* 介紹區塊 */
-      .intro {
-        padding: 100px 0;
-        background-color: #0f0f0f;
-      }
-
-      .section-title {
-        font-size: 36px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 50px;
-      }
-
-      .intro-content {
-        display: flex;
-        gap: 50px;
-      }
-
-      .intro-text {
-        flex: 1;
-      }
-
-      .intro-text p {
-        margin-bottom: 20px;
-        font-size: 18px;
-      }
-
-      .intro-images {
-        flex: 1;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-
-      .dots {
-        display: flex;
-        gap: 10px;
-        margin: 30px 0;
-      }
-
-      .dot {
-        width: 10px;
-        height: 10px;
-        background-color: #00ff9d;
-        border-radius: 50%;
-      }
-
-      /* 關於我區塊 */
-      .about {
-        padding: 100px 0;
-        background-color: #fff;
-        color: #000;
-      }
-
-      .about-container {
-        display: flex;
-        gap: 50px;
-      }
-
-      .about-left {
-        flex: 1;
-      }
-
-      .profile {
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
-      }
-
-      .profile-img {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 20px;
-      }
-
-      .profile-info h3 {
-        font-size: 24px;
-        font-weight: 600;
-      }
-
-      .profile-info p {
-        color: #666;
-        font-size: 16px;
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-      }
-
-      .stat-item h4 {
-        font-size: 36px;
-        font-weight: 700;
-        color: #00ff9d;
-      }
-
-      .stat-item p {
-        font-size: 16px;
-        color: #666;
-      }
-
-      .about-right {
-        flex: 1;
-      }
-
-      .about-right h2 {
-        font-size: 36px;
-        font-weight: 600;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-      }
-
-      .about-right p {
-        margin-bottom: 20px;
-        font-size: 18px;
-        color: #333;
-      }
-
-      /* 聯繫區塊 */
-      .contact {
-        padding: 80px 0;
-        background-color: #0f0f0f;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      .contact h2 {
-        font-size: 36px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      .contact-arrow {
-        font-size: 24px;
-        margin-left: 10px;
-      }
-
-      .social-icons {
-        display: flex;
-        gap: 20px;
-      }
-
-      .social-icon {
-        width: 50px;
-        height: 50px;
-        border-radius: 10px;
-        background-color: #1a1a1a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 24px;
-        transition: all 0.3s;
-      }
-
-      .social-icon:hover {
-        transform: translateY(-5px);
-      }
-
-      .social-icon.facebook {
-        color: #1877f2;
-      }
-
-      .social-icon.instagram {
-        color: #e1306c;
-      }
-
-      .social-icon.whatsapp {
-        color: #25d366;
-      }
-
-      /* 項目區塊 */
-      .projects {
-        padding: 100px 0;
-        background-color: #fff;
-        color: #000;
-      }
-
-      .projects h2 {
-        font-size: 36px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        margin-bottom: 50px;
-        text-align: center;
-      }
-
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 30px;
-        margin-bottom: 50px;
-      }
-
-      .project-item {
-        overflow: hidden;
-        border-radius: 10px;
-        position: relative;
-      }
-
-      .project-item img {
-        transition: transform 0.5s;
-      }
-
-      .project-item:hover img {
-        transform: scale(1.05);
-      }
-
-      .project-info {
-        margin-top: 20px;
-        text-align: center;
-      }
-
-      .project-info p {
-        font-size: 16px;
-        color: #666;
-        margin-bottom: 15px;
-      }
-
-      /* 頁腳 */
-      footer {
-        padding: 20px 0;
-        background-color: #000;
-        text-align: center;
-        font-size: 14px;
-        color: #666;
-      }
-
-      /* 響應式設計 */
-      @media (max-width: 992px) {
-        .hero h1 {
-          font-size: 36px;
-        }
-
-        .hero h2 {
-          font-size: 54px;
-        }
-
-        .intro-content,
-        .about-container {
-          flex-direction: column;
-        }
-
-        .project-grid {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      @media (max-width: 768px) {
-        .nav-links {
-          display: none;
-        }
-
-        .hero-bg {
-          width: 100%;
-          opacity: 0.3;
-        }
-
-        .hero-content {
-          text-align: center;
-          padding-left: 0;
-        }
-
-        .project-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .contact {
-          flex-direction: column;
-          gap: 30px;
-          text-align: center;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- 導航欄 -->
     <header>
       <div class="container">
         <nav>
-          <div class="logo">William.dev</div>
           <ul class="nav-links">
             <li><a href="#about">關於我</a></li>
             <li><a href="#projects">作品集</a></li>
@@ -446,14 +33,14 @@
 
     <!-- 英雄區塊 -->
     <section class="hero">
-      <img
+      <!-- <img
         src="/placeholder.svg?height=1080&width=960"
         alt="背景圖片"
         class="hero-bg"
-      />
+      /> -->
       <div class="hero-content">
         <h1>Hi<br />I'm a FRONT-END<br />DEVELOPER</h1>
-        <h2>WILLIAM</h2>
+        <h2>Ray</h2>
         <a href="#contact" class="btn">聯繫我</a>
       </div>
     </section>
@@ -480,10 +67,6 @@
               <span class="dot"></span>
             </div>
           </div>
-          <div class="intro-images">
-            <img src="/placeholder.svg?height=300&width=250" alt="工作照片1" />
-            <img src="/placeholder.svg?height=300&width=250" alt="工作照片2" />
-          </div>
         </div>
       </div>
     </section>
@@ -495,7 +78,7 @@
           <div class="about-left">
             <div class="profile">
               <div class="profile-img">
-                <img src="/placeholder.svg?height=80&width=80" alt="個人頭像" />
+                <img src="assets/personal.png" alt="個人頭像" />
               </div>
               <div class="profile-info">
                 <h3>Ray Chen</h3>
@@ -506,18 +89,6 @@
               <div class="stat-item">
                 <h4>5+</h4>
                 <p>年工作經驗</p>
-              </div>
-              <div class="stat-item">
-                <h4>50+</h4>
-                <p>完成的項目</p>
-              </div>
-              <div class="stat-item">
-                <h4>15+</h4>
-                <p>合作客戶</p>
-              </div>
-              <div class="stat-item">
-                <h4>3+</h4>
-                <p>獲得的獎項</p>
               </div>
             </div>
           </div>
@@ -561,22 +132,22 @@
         <h2>MY PROJECTS</h2>
         <div class="project-grid">
           <div class="project-item">
-            <img src="/placeholder.svg?height=250&width=400" alt="項目1" />
+            <img src="/placeholder.svg?height=250&width=400" alt="" />
           </div>
           <div class="project-item">
-            <img src="/placeholder.svg?height=250&width=400" alt="項目2" />
+            <img src="/placeholder.svg?height=250&width=400" alt="" />
           </div>
           <div class="project-item">
-            <img src="/placeholder.svg?height=250&width=400" alt="項目3" />
+            <img src="/placeholder.svg?height=250&width=400" alt="" />
           </div>
           <div class="project-item">
-            <img src="/placeholder.svg?height=250&width=400" alt="項目4" />
+            <img src="/placeholder.svg?height=250&width=400" alt="" />
           </div>
           <div class="project-item">
-            <img src="/placeholder.svg?height=250&width=400" alt="項目5" />
+            <img src="/placeholder.svg?height=250&width=400" alt="" />
           </div>
           <div class="project-item">
-            <img src="/placeholder.svg?height=250&width=400" alt="項目6" />
+            <img src="/placeholder.svg?height=250&width=400" alt="" />
           </div>
         </div>
         <div class="project-info">
@@ -591,7 +162,7 @@
     <!-- 頁腳 -->
     <footer>
       <div class="container">
-        <p>© 版權所有 William Lee 2025</p>
+        <p>© 版權所有 2025</p>
       </div>
     </footer>
   </body>
